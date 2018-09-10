@@ -2,7 +2,7 @@
 
 while :
 	do
-	bash update
+	./update.sh
 done
 
 
