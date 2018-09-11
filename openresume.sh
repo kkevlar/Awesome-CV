@@ -1,4 +1,4 @@
 #!/bin/sh
 
-evince /home/kevlar/Documents/Awesome-CV/examples/resume.pdf &
+evince /home/kevlar/Documents/Awesome-CV/resume.pdf &
 
