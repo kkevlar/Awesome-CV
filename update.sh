@@ -14,7 +14,7 @@ else
 fi
 
 echo "get /home/kevlar/Awesome-CV/resume.pdf" > todo
-cat todo | sftp kevlar@159.65.72.181
+cat todo | (sftp kevlar@159.65.72.181 &> /dev/null) &>/dev/null
 wait
 
 echo "Done. Updated."
