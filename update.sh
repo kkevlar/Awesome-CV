@@ -1,10 +1,11 @@
 #!/bin/sh
 
+bash putall.sh
 echo "cd /home/kevlar/Awesome-CV" > todo
 echo "bash local.sh" >> todo
 echo "exit" >> todo
 echo ""
-cat todo | ssh kevlar@159.65.72.181 | grep ZZZZOK > /dev/null
+cat todo | ssh kevlar@kevinkellar.com | grep ZZZZOK > /dev/null
 if [ $? -eq 1 ]; then
     bash killrepeat.sh
     echo "Failure!! Killing repeat updater."
@@ -14,7 +15,7 @@ else
 fi
 
 echo "get /home/kevlar/Awesome-CV/resume.pdf" > todo
-cat todo | sftp kevlar@159.65.72.181
+cat todo | sftp kevlar@kevinkellar.com
 wait
 
 echo "Done. Updated."
